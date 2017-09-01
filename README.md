@@ -4,6 +4,7 @@ A docker with steam preconfigured inside.
 Configure your `steamcmd.cmd` to run your dedicated server.  
 
 ##Disclaimer
+
 This Image is based on the project https://github.com/Micka33/docker-steam
 
 ## Dependency
