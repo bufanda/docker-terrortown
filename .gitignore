@@ -1,7 +1,1 @@
-#Ignore everything min mounted
-mounted/*
 
-
-#but not the cfgs
-!mounted/csgo/cfg/server.cfg
-!mounted/csgo/cfg/gamemode_casual.cfg
