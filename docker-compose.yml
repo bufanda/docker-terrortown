@@ -16,6 +16,13 @@ services:
       - "27016:27016/udp"
       - "27017:27017/udp"
       - "27018:27018/udp"
+    environment:
+     #Steam Authorization Keys an Workshop Collection Key for Addons Installed on
+     #Server start.
+     #- ENV_DOCKER_STEAM_ACC_KEY=
+     #- ENV_DOCKER_STEAM_AUTH_KEY=
+     #- ENV_DOCKER_WORKSHOP_COLLECTION=
+     -ENV_DOCKER_TTT_PORT=27015
     volumes:
       - ./configs/server.cfg:/opt/steam/garrysmod/cfg/server.cfg:ro
       - ./configs/autoexec.cfg:/opt/steam/garrysmod/cfg/autoexec.cfg:ro
