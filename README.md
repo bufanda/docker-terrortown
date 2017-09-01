@@ -29,20 +29,41 @@ This Image is based on the project https://github.com/Micka33/docker-steam
   - [CRUX Linux](https://docs.docker.com/installation/cruxlinux/)
   - [Microsoft Windows](https://docs.docker.com/installation/windows/)
 
+optional
+
 - [Docker Compose](https://www.docker.com/)
 
 ## Install it
 
+Without docker-compose:
+
 ```bash
 git clone https://github.com/bufanda/docker-terrortown.git
-cd docker-steam
-sudo docker build -t mysteamserver ./docker_files
+cd docker-terrortown
+sudo docker build -t bufanda/terrortown ./docker_files
+```
+
+With docker-compose:
+
+```bash
+git clone https://github.com/bufanda/docker-terrortown.git
+cd docker-terrortown
+docker-compose build
 ```
 
 ## Run it
 
+Without docker-compose:
+
+Modefiy and use the run script:
+
 ```bash
-docker-compose build
+./run.sh start
+```
+
+With docker-compose:
+
+```bash
 docker-compose up -d
 ```
 
