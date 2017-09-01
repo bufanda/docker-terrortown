@@ -9,4 +9,27 @@ then
 	ln -s /etc/service/steamcmd/linux32/steamclient.so "$file"
 fi
 
-exec ./srcds_run +sv_setsteamaccount ${ENV_DOCKER_STEAM_ACC_KEY} -port 27015 -console -maxplayers 16 -game garrysmod +gamemode terrortown +map ttt_bb_teenroom_b2 +ip 0.0.0.0 -authkey ${ENV_DOCKER_STEAM_AUTH_KEY} +host_workshop_collection ${ENV_DOCKER_WORKSHOP_COLLECTION}
+if [ ! -z $ENV_DOCKER_STEAM_ACC_KEY ]
+then
+	STEAM_ACC_KEY="+sv_setsteamaccount ${ENV_DOCKER_STEAM_ACC_KEY}"
+fi
+
+if [ -z $ENV_DOCKER_TTT_PORT ]
+then
+	ENV_DOCKER_TTT_PORT=27015
+fi
+
+if [ ! -z $ENV_DOCKER_STEAM_AUTH_KEY ]
+then
+	STEAM_AUTH_KEY="-authkey ${ENV_DOCKER_STEAM_AUTH_KEY}"
+fi
+
+if [ ! -z $ENV_DOCKER_WORKSHOP_COLLECTION ]
+then
+	WORKSHOP_COLLECTION="+host_workshop_collection ${ENV_DOCKER_WORKSHOP_COLLECTION}"
+fi
+
+exec ./srcds_run ${STEAM_ACC_KEY} -port ${ENV_DOCKER_TTT_PORT} \
+-console -maxplayers 16 -game garrysmod +gamemode terrortown \
++map ttt_bb_teenroom_b2 +ip 0.0.0.0 ${STEAM_AUTH_KEY} \
+${WORKSHOP_COLLECTION}
