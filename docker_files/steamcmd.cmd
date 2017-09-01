@@ -6,7 +6,7 @@
 login anonymous
 // Where all the files will be stored
 // Don't change, unless you know what you are doing
-force_install_dir /root/mounted/
+force_install_dir /opt/steam
 // See https://developer.valvesoftware.com/wiki/Dedicated_Servers_List#Linux_Dedicated_Servers
 // to find your dedicated server ID
 // 740: Counter-Strike: Global Offensive Dedicated Server
