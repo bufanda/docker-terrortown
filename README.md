@@ -1,10 +1,10 @@
-#docker-terrortown
+# docker-terrortown
 
 A docker with steam preconfigured inside.  
 Configure your `steamcmd.cmd` to run your dedicated server.  
 
 
-##Disclaimer
+## Disclaimer
 
 This Image is based on the project https://github.com/Micka33/docker-steam
 
@@ -29,6 +29,7 @@ This Image is based on the project https://github.com/Micka33/docker-steam
   - [CRUX Linux](https://docs.docker.com/installation/cruxlinux/)
   - [Microsoft Windows](https://docs.docker.com/installation/windows/)
 
+- [Docker Compose](https://www.docker.com/)
 
 ## Install it
 
@@ -40,7 +41,11 @@ sudo docker build -t mysteamserver ./docker_files
 
 ## Run it
 
+```bash
+docker-compose build
+docker-compose up -d
+```
 
 ## About it
 
-Currently, this docker is configured to run a **Classic Competitive CS:GO dedicated server**.
+Currently, this docker is configured to run a **Garry's Mod TTT dedicated server**.
