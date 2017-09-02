@@ -22,7 +22,7 @@ services:
      #- ENV_DOCKER_STEAM_ACC_KEY=
      #- ENV_DOCKER_STEAM_AUTH_KEY=
      #- ENV_DOCKER_WORKSHOP_COLLECTION=
-     -ENV_DOCKER_TTT_PORT=27015
+     - ENV_DOCKER_TTT_PORT=27015
     volumes:
       - ./configs/server.cfg:/opt/steam/garrysmod/cfg/server.cfg:ro
       - ./configs/autoexec.cfg:/opt/steam/garrysmod/cfg/autoexec.cfg:ro
